@@ -345,7 +345,18 @@ function updateTotal() {
 
      const buttonAddOne = document.createElement("button");
      buttonAddOne.textContent = productsFruit[i]. btnAdd;
-     buttonAddOne.className = "addCart"
+     buttonAddOne.className = "addCart";
+     buttonAddOne.addEventListener('click',function(){
+         
+         let name = productsFruit[i].name;
+         let price = productsFruit[i].price;
+         let img = productsFruit[i].imgUrl;
+         addProductToCart(name, price, img);
+    
+        updateTotal();
+     });
+     
+
     
     
 
@@ -376,7 +387,7 @@ function updateTotal() {
      {
          imgUrl: "images/almond.jpeg",
          name: "Almond",
-         price: "25 Dkk",
+         price: "150 Dkk",
          btnAdd: "Add to Cart",
         
        
@@ -403,13 +414,13 @@ function updateTotal() {
      {
            imgUrl: "images/pista.jpg",
          name: "Pista",
-         price: "30 Dkk",
+         price: "190 Dkk",
          btnAdd: "Add to Cart",
      },
        {
            imgUrl: "images/walnut.jpg",
          name: "Walnut",
-         price: "30 Dkk",
+         price: "70 Dkk",
            btnAdd: "Add to Cart",
     },
 
@@ -437,7 +448,16 @@ function updateTotal() {
 
     const buttonAddtwo = document.createElement("button");
      buttonAddtwo.textContent = productsdryFruit[i]. btnAdd;
-     buttonAddtwo.className = "addCart"
+     buttonAddtwo.className = "addCart";
+     buttonAddtwo.addEventListener('click',function(){
+         
+         let name = productsdryFruit[i].name;
+         let price = productsdryFruit[i].price;
+         let img = productsdryFruit[i].imgUrl;
+         addProductToCart(name, price, img);
+    
+        updateTotal();
+     });
     
     
 
