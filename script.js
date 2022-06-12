@@ -137,7 +137,6 @@ function changeImage() {
      const buttonAdd = document.createElement("button");
      buttonAdd.textContent = products[i]. btnAdd;
      buttonAdd.className = "addCart";
-     //buttonAdd.setAttribute('index', i);
      buttonAdd.addEventListener('click',function(){
          
          let title = products[i].name;
@@ -220,16 +219,7 @@ function quantityChanged(event) {
     updateTotal();
 }
 
-// function addCartClicked(e) {
-//     //let button = event.target;
-//     console.log(e.target.getAttribute('index'));
-//     let title = products[i].name;
-//     let price = products[i].price;
-//     let img = products[i].imgUrl;
-//     addProductToCart(title, price, img);
-    
-//         updateTotal();
-//     }
+
 
 
 function addProductToCart(title, price, img) {
