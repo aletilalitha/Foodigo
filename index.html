@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodigo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- External Stylesheet For Font Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+   <!--External Stylesheet For Font-Family-->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=PT+Serif:ital@1&display=swap" rel="stylesheet" />
+   <script src="script.js" async></script>
+</head>
+<body>
+    <div class="main">
+   
+        <!--  Header Start -->
+    
+    <div class="main-header">
+        
+        <!--  Logo Start  -->
+       <div class="logo">
+         <i class="fa fa-shopping-cart" id="logo-image"></i>
+         <span class="logo-text">Foodigo</span>
+       </div>
+         <!-- Logo End-->
+      
+         <!--  Search Box Start-->
+       <div class="search-box">
+         <input type="text" placeholder="Search.." name="search" />
+         <button><i class="fa fa-search"></i></button>
+       </div>
+       <!--Search Box End-->
+    </div>
+    
+    <!-- Header End-->
+
+    <!-- Navbar Start-->
+    
+    <div class="main-navbar">
+        <!-- Navigation Links Start-->
+        <ul class="nav-links" >
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            
+            <li>
+            <a href="#" onmouseover="showmenu('undermenu')" onmouseout="setTimeToHide()" class="moremenu">Products</a>
+           <ul class="ul_links">
+            <li>
+                <div id="undermenu" onmouseover="ReSetTimer()" onmouseout="setTimeToHide()" style="display: none">
+                    <a href="#vegetable-section" title="vegetable">Vegetables</a>
+                    <a href="#fruit-section" title="Fruits">Fruits</a>
+                    <a href="#dryfruit-section" title="rice">DryFruits</a>
+                    <a href="#" title="Branded-food">Branded Food</a>
+                    <a href="#" title="frozen-food">Frozen Food</a>
+                    <a href="#" title="bread">Bread</a>
+                    <a href="#" title="Dry-fruits">Rice</a>
+                    <a href="#" title="general products">General products</a>
+                </div>
+            </li>
+        </ul>
+        </li>
+        <li><a href="#deal">Deals</a></li>
+       <li><a href="#">Contact</a></li>
+      </ul>
+    <!-- Toggle Button-->
+      <div class="nav-toggle">
+     <button class="navbar_toggle">
+        <i class="fa fa-bars"></i>
+    </button>
+    </div>
+      <!--Navigation Links End-->
+
+      <!--Cart Start-->
+        <div class="buttons-navbar">
+           <i class="fa fa-shopping-basket" id="cart-icon"></i>
+              <div class="cart">
+               <h2 class="cart-title">Your Cart</h2>
+                  <div class="cart-content">
+                  </div>
+                  <!--total price start-->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">0Dkk</div>
+                    </div>
+                    <!-- totle price end-->
+                    <button  class="btn-buy">Buy Now</button>
+                    <i class="fa fa-close" id="close-cart"></i>
+                   </div>
+                
+            </div>
+            
+       </div>
+       <!-- Cart End-->
+     <!-- Navbar End-->
+   <!-- image Slider Section Start-->
+<div class="first-section">
+<div class="section">
+    <div class="product-list">
+        <h2><i class="fa fa-bars"></i>&nbsp;&nbsp;All Products</h2>
+        <ul class="products">
+            <li>vegetables</li>
+            <li>Fruits</li>
+            <li>rice & rice products</li>
+            <li>branded foods</li>
+            <li>frozen food</li>
+            <li>cereals & millets</li>
+            <li>bread</li>
+            <li>chocolates & sweets</li>
+            <li>dry fruits</li>
+            <li>oils & ghee</li>
+            <li>atta/flour</li>
+            <li>general Products</li>
+        </ul>
+    </div>
+    <div class="image-slider">
+        <img src="" class="slide" />
+    </div>
+</div>
+   </div>
+   <!--  Image Slider Section End-->
+
+   <!-- Features Section Start-->
+    <div id="features">
+    <h2 class="features">Our <span>Features</span></h2>
+    <div class="features-section">
+   <div class="features-display">
+    <img src="images/organicfea.webp" width="200px" height="200px">
+    <h3>Fresh And Organic</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat et tortor eu dignissim. Ut id nulla ligula. Nam
+    neque lorem</p>
+    <button>Read More</button>
+   </div>
+ <div class="features-display">
+    <img src="images/fastdeliver.jpeg" width="200px" height="200px">
+    <h3>Free Delivery</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat et tortor eu dignissim. Ut id nulla
+        ligula. Nam
+        neque lorem</p>
+    <button>Read More</button>
+</div>
+<div class="features-display">
+    <img src="images/easypay.webp" width="200px" height="200px">
+    <h3>Easy Payments</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam placerat et tortor eu dignissim. Ut id nulla
+        ligula. Nam
+        neque lorem</p>
+    <button>Read More</button>
+</div>
+</div>
+</div>
+<!--Features Section End-->
+<!-- Prdoucts Display Section Start-->
+<div id="product-dis">
+<h2 class="pro-dis">Products <span>Categories</span></h2>
+
+<!-- Vegetables Display from JavaScript using Array Object-->
+<div class="vegetable-section" id="vegetable-section">
+    <div class="veg-text">
+        <h2>vegetables ::</h2>
+    </div>
+    <div class="vegetable-display"></div>
+</div>
+<!-- Vegetable Display End-->
+<!-- Fruits Display-->
+<div class="fruit-section" id="fruit-section">
+    <div class="fruit-text">
+        <h2>fruits ::</h2>
+    </div>
+    <div class="fruit-display"></div>
+</div>
+<!-- Fruit Display End-->
+<!-- Dry Fruit Section Start-->
+<div class="dryfruit-section" id="dryfruit-section">
+    <div class="dryfruit-text">
+        <h2>dry fruits ::</h2>
+    </div>
+    <div class="dryfruit-display"></div>
+</div>
+</div>
+<!-- Dry Fruit Section End-->
+<!--Deals section start-->
+<div class="deal" id="deal">
+    <div class="content">
+        <h3 class="title">Deal Of The Day</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+        consequatur</p>
+        <div class="count-down">
+            <div class="box">
+                <h3 id="day">00</h3>
+                <span>Day</span>
+        </div>
+        <div class="box">
+            <h3 id="hour">00</h3>
+            <span>Hour</span>
+        </div>
+        <div class="box">
+            <h3 id="minute">00</h3>
+            <span>Minute</span>
+        </div>
+        <div class="box">
+            <h3 id="second">00</h3>
+            <span>Second</span>
+        </div>
+
+    </div>
+<button class="btn">Check The Deal</button>
+</div>
+</div>
+<!--Deal Section End-->
+
+<!-- footer section Start-->
+<div class="footer">
+    <div class="footer-main">
+     <div class="logo">
+        <i class="fa fa-shopping-cart" id="logo-image"></i>
+        <span class="logo-text">Foodigo</span>
+    </div> 
+     <div class="footer-text">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore  </p>
+     </div>
+   <div class="social-icons">
+    <a href="#"> <i class="fa fa-facebook"></i></a>
+    <a href="#"> <i class="fa fa-twitter"></i></a>
+    <a href="#"> <i class="fa fa-linkedin"></i></a>
+    <a href="#"> <i class="fa fa-instagram"></i></a>
+  </div>
+</div>
+<div class="footer-links">
+    <h3>Our Locations</h3>
+    <ul>
+        <li><a href="#">Denmark</a></li>
+        <li><a href="#">India</a></li>
+        <li><a href="#">USA</a></li>
+        <li><a href="#">Sweden</a></li>
+        <li><a href="#">Norway</a></li>
+    </ul>
+</div>
+<div class="footer-links">
+<h3>Quick Links</h3>
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#product-dis">Products</a></li>
+    <li><a href="#deal">Deals</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</div>
+<div class="footer-links">
+    <h3>Download App</h3>
+    <ul>
+        <li><a href="#">Google Apps</a></li>
+        <li><a href="#">App Store</a></li>
+        <li><a href="#">windows XP</a></li>
+        <li><a href="#">Android</a></li>
+        <li><a href="#">mac</a></li>
+
+        
+    </ul>
+</div>
+   </div>
+ </div>
+</body>
+</html>
