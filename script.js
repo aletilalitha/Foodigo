@@ -139,10 +139,10 @@ function changeImage() {
      buttonAdd.className = "addCart";
      buttonAdd.addEventListener('click',function(){
          
-         let title = products[i].name;
+         let name = products[i].name;
          let price = products[i].price;
          let img = products[i].imgUrl;
-         addProductToCart(title, price, img);
+         addProductToCart(name, price, img);
     
         updateTotal();
      });
@@ -222,22 +222,22 @@ function quantityChanged(event) {
 
 
 
-function addProductToCart(title, price, img) {
+function addProductToCart(name, price, img) {
     let cartShopBox = document.createElement('div');
     cartShopBox.classList.add('cart-box');
     let cartItems = document.getElementsByClassName('cart-content')[0];
     let cartItemesNames = document.getElementsByClassName('cart-product-title');
     for (let i = 0; i < cartItemesNames.length; i++) {
-        if (cartItemesNames[i].innerText == title) {
+        if (cartItemesNames[i].textContent==name) {
             alert("You have already Add this item to cart");
             return;
-        }
+       }
     }
 
 
     let cartBoxContent = `  <img src="${img}" class="cart-img">
                          <div class="detail-box">
-                            <div class="cart-product-title">${title}</div>
+                            <div class="cart-product-title">${name}</div>
                             <div class="cart-price">${price}</div>
                             <input type="number" value="1" class="cart-quantity">
                         </div>
