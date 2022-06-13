@@ -501,3 +501,24 @@ function CountDown() {
 setInterval(function () {
     CountDown();
 }, 1000);
+
+//toggle button
+
+//   const navToggle = document.querySelector(".navbar_toggle");
+//   const links = document.querySelector(".nav-links");
+
+//   navToggle.onclick = () => {
+//     links.classList.add("active");
+
+// };
+//   navToggle.addEventListener('click', function(){
+//      links.classList.toggle("show-nav");
+//   })
+
+//  cartIcon.onclick = () => {
+//     cart.classList.add("active");
+
+// }
+// closeCart.onclick = () => {
+//     cart.classList.remove('active');
+// }

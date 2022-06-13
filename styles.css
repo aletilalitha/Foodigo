@@ -675,17 +675,19 @@ textarea{
     .nav-links{
         display: none;
     }
-    .show_links {
-        padding-top: 2%;
+    .show-nav {
+        padding-top: 30px;
         display: flex;
-        width: 100vw;
-        height: 100vh;
+        width: 150px;
+        height: 50vh;
         flex-direction: column;
         justify-content: flex-start;
     }
     .nav-toggle button{
         display:block;
+       
     }
+  
     .buttons-navbar {
         display: flex;
         align-items: center;
@@ -1010,9 +1012,9 @@ textarea {
 }
 .cart {
     position: fixed;
-    top: 0;
+    top: 20%;
     right: -100%;
-    width: 200px;
+    width: 220px;
     min-height: 60%;
     padding: 10px;
     background-color: #FFF;
