@@ -317,7 +317,7 @@ function ready() {
         input.addEventListener('click', quantityChanged);
     }
     document.getElementsByClassName('btn-buy')[0].addEventListener('click', buyButtonClicked);
-   
+    
 }
 
 function buyButtonClicked() {
