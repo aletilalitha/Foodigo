@@ -1,30 +1,5 @@
-// MouseOver and MouseOut in menu bar( Prdocuts And Deals)  
 
-let timeOutValue = 100;      // SET TIMEOUT (IN MILISECONDS).
-     let setTimeToHide_ID, mItem;
 
-     function showmenu(obj) {
-         if (mItem) mItem.style.display = 'none';
-
-         mItem = document.getElementById(obj);
-         mItem.style.display = 'block';
-    }
-//     // SET TIME TO HIDE MENU LIST.
-     function setTimeToHide() {
-         setTimeToHide_ID = window.setTimeout(HideMenu, timeOutValue);
-     }
-
-     function HideMenu() {
-        if (mItem) mItem.style.display = 'none';
-     }       // HIDE THE MENU LIST AFTER A SPECIFIED TIME.
-
-     function ReSetTimer() {
-         if (setTimeToHide_ID) {
-             window.clearTimeout(setTimeToHide_ID);
-             setTimeToHide_ID = 0;
-         }
-};
-//cart 
 
  
 //Automatic Image Changes 
@@ -66,9 +41,6 @@ function changeImage() {
          name: "Okra",
          price: "60 Dkk",
          btnAdd: "Add to Cart",
-       
-       
-    
     },
 
     {
@@ -76,27 +48,19 @@ function changeImage() {
          name: "Tomato",
         price: "50 Dkk",
         btnAdd: "Add to Cart",
-        
-       
-         },
+     },
      {
          imgUrl: "images/cali.webp",
         name: "Capsicum",
         price: "40 Dkk",
          btnAdd:"Add to Cart",
-        
-    
-     
-    },
+     },
     {
         imgUrl: "images/brinjal.jpeg",
          name: "Brinjal",
         price: "30 Dkk",
         btnAdd: "Add to Cart",
-        
-       
-    
-    },
+     },
      {
            imgUrl: "images/potatoes.jpeg",
          name: "potatoes",
@@ -109,9 +73,7 @@ function changeImage() {
          price: "10 Dkk",
         btnAdd: "Add to Cart",
      },
-
-
- ];
+];
 
  for (let i = 0; i < products.length; i++){
      const itemElement = document.createElement("div");
@@ -137,6 +99,7 @@ function changeImage() {
      const buttonAdd = document.createElement("button");
      buttonAdd.textContent = products[i]. btnAdd;
      buttonAdd.className = "addCart";
+     // When Click the Add to Cart Button it added to the cart
      buttonAdd.addEventListener('click',function(){
          
          let name = products[i].name;
@@ -146,30 +109,192 @@ function changeImage() {
     
         updateTotal();
      });
-     
-
-    
-     
-   
-    
      itemElement.appendChild(imageElement);
      itemElement.appendChild(nameElement);
      itemElement.appendChild(priceElement);
      itemElement.appendChild(buttonAdd);
+     vegetableDisplay.appendChild(itemElement);
     
-    vegetableDisplay.appendChild(itemElement);
+ }
+
+ const fruitsproDisplay = document.querySelector(".fruit-section");
+ const fruitDisplay=document.querySelector(".fruit-display")
+
+ const productsFruit = [
+     {
+         imgUrl:"images/apple.jpeg",
+         name: "Apples",
+         price: "20 Dkk",
+        btnAdd: "Add to Cart",
+    },
+
+     {
+         imgUrl: "images/banana.jpeg",
+         name: "Banana",
+         price: "25 Dkk",
+         btnAdd: "Add to Cart",
+    },
+     {
+         imgUrl: "images/guava.jpeg",
+         name: "Guava",
+         price: "60 Dkk",
+          btnAdd:"Add to Cart",
+     },
+     {
+         imgUrl: "images/mangoes.jpeg",
+         name: "Mangoes",
+         price: "120 Dkk",
+         btnAdd: "Add to Cart", 
+    
+     },
+    {
+           imgUrl: "images/strawberry.jpeg",
+         name: "Strawberry",
+         price: "30 Dkk",
+         btnAdd: "Add to Cart",
+     },
+       {
+           imgUrl: "images/watermelon.jpeg",
+         name: "Watermelon",
+         price: "30 Dkk",
+         btnAdd: "Add to Cart",
+     },
+];
+
+ for (let i = 0; i < productsFruit.length; i++){
+     const itemElementOne = document.createElement("div");
+     itemElementOne.className = "item";
+   
+
+     const imageElementOne = document.createElement("img");
+     imageElementOne.src = productsFruit[i].imgUrl;
+     imageElementOne.style.width = "160px";
+     imageElementOne.style.height = "100px";
+     
+
+     const nameElementOne = document.createElement("p");
+     nameElementOne.textContent = productsFruit[i].name;
+      nameElementOne.style.color = "green";
+
+     const priceElementOne = document.createElement("p");
+     priceElementOne.textContent = productsFruit[i].price;
+     priceElementOne.style.color = "red";
+
+     const buttonAddOne = document.createElement("button");
+     buttonAddOne.textContent = productsFruit[i]. btnAdd;
+     buttonAddOne.className = "addCart";
+     buttonAddOne.addEventListener('click',function(){
+         
+         let name = productsFruit[i].name;
+         let price = productsFruit[i].price;
+         let img = productsFruit[i].imgUrl;
+         addProductToCart(name, price, img);
+    
+        updateTotal();
+     });
+     itemElementOne.appendChild(imageElementOne);
+     itemElementOne.appendChild(nameElementOne);
+     itemElementOne.appendChild(priceElementOne);
+     itemElementOne.appendChild(buttonAddOne);
+     fruitDisplay.appendChild(itemElementOne);
     
  }
 
 
- //cart 
+ const dryfruitsproDisplay = document.querySelector(".dryfruit-section");
+ const dryfruitDisplay = document.querySelector(".dryfruit-display");
+
+ const productsdryFruit = [
+     {
+         imgUrl:"images/kaju.jpeg",
+         name: "Kaju",
+         price: "120 Dkk",
+         btnAdd: "Add to Cart",
+       },
+      {
+         imgUrl: "images/almond.jpeg",
+         name: "Almond",
+         price: "150 Dkk",
+         btnAdd: "Add to Cart",
+    },
+     {
+         imgUrl: "images/dates.webp",
+         name: "Dates",
+         price: "60 Dkk",
+          btnAdd:"Add to Cart",
+    },
+     {
+         imgUrl: "images/Raisins.jpeg",
+         name: "Raisins",
+         price: "120 Dkk",
+         btnAdd: "Add to Cart",
+    },
+     {
+           imgUrl: "images/pista.jpg",
+         name: "Pista",
+         price: "190 Dkk",
+         btnAdd: "Add to Cart",
+     },
+       {
+           imgUrl: "images/walnut.jpg",
+         name: "Walnut",
+         price: "70 Dkk",
+           btnAdd: "Add to Cart",
+    },
+
+
+ ];
+
+ for (let i = 0; i < productsdryFruit.length; i++){
+     const itemElementtwo = document.createElement("div");
+     itemElementtwo.className = "item";
+   
+
+     const imageElementtwo = document.createElement("img");
+     imageElementtwo.src = productsdryFruit[i].imgUrl;
+     imageElementtwo.style.width = "160px";
+     imageElementtwo.style.height = "100px";
+  
+
+     const nameElementtwo = document.createElement("p");
+     nameElementtwo.textContent = productsdryFruit[i].name;
+      nameElementtwo.style.color = "green";
+
+     const priceElementtwo = document.createElement("p");
+     priceElementtwo.textContent = productsdryFruit[i].price;
+     priceElementtwo.style.color = "red";
+
+    const buttonAddtwo = document.createElement("button");
+     buttonAddtwo.textContent = productsdryFruit[i]. btnAdd;
+     buttonAddtwo.className = "addCart";
+     buttonAddtwo.addEventListener('click',function(){
+         
+         let name = productsdryFruit[i].name;
+         let price = productsdryFruit[i].price;
+         let img = productsdryFruit[i].imgUrl;
+         addProductToCart(name, price, img);
+    
+        updateTotal();
+     });
+     itemElementtwo.appendChild(imageElementtwo);
+     itemElementtwo.appendChild(nameElementtwo);
+     itemElementtwo.appendChild(priceElementtwo);
+     itemElementtwo.appendChild(buttonAddtwo);
+     dryfruitDisplay.appendChild(itemElementtwo);
+    
+ }
+
+
+ //cart  section Js
 let cartIcon = document.querySelector('#cart-icon');
 let cart = document.querySelector('.cart');
 let closeCart = document.querySelector('#close-cart');
+//when click the shopping cart button it opens the cart bag  
 cartIcon.onclick = () => {
     cart.classList.add("active");
 
 }
+//when clicks the close button it closes the cart page
 closeCart.onclick = () => {
     cart.classList.remove('active');
 }
@@ -272,207 +397,10 @@ function updateTotal() {
 
 
 
- const fruitsproDisplay = document.querySelector(".fruit-section");
- const fruitDisplay=document.querySelector(".fruit-display")
+ 
 
- const productsFruit = [
-     {
-         imgUrl:"images/apple.jpeg",
-         name: "Apples",
-         price: "20 Dkk",
-        btnAdd: "Add to Cart",
-       
-       
-    
-     },
-
-     {
-         imgUrl: "images/banana.jpeg",
-         name: "Banana",
-         price: "25 Dkk",
-         btnAdd: "Add to Cart",
-        
-       
-    
-    },
-     {
-         imgUrl: "images/guava.jpeg",
-         name: "Guava",
-         price: "60 Dkk",
-          btnAdd:"Add to Cart",
-     },
-     {
-         imgUrl: "images/mangoes.jpeg",
-         name: "Mangoes",
-         price: "120 Dkk",
-         btnAdd: "Add to Cart", 
-    
-     },
-    {
-           imgUrl: "images/strawberry.jpeg",
-         name: "Strawberry",
-         price: "30 Dkk",
-         btnAdd: "Add to Cart",
-     },
-       {
-           imgUrl: "images/watermelon.jpeg",
-         name: "Watermelon",
-         price: "30 Dkk",
-         btnAdd: "Add to Cart",
-     },
-
-
- ];
-
- for (let i = 0; i < productsFruit.length; i++){
-     const itemElementOne = document.createElement("div");
-     itemElementOne.className = "item";
-   
-
-     const imageElementOne = document.createElement("img");
-     imageElementOne.src = productsFruit[i].imgUrl;
-     imageElementOne.style.width = "160px";
-     imageElementOne.style.height = "100px";
-     
-
-     const nameElementOne = document.createElement("p");
-     nameElementOne.textContent = productsFruit[i].name;
-      nameElementOne.style.color = "green";
-
-     const priceElementOne = document.createElement("p");
-     priceElementOne.textContent = productsFruit[i].price;
-     priceElementOne.style.color = "red";
-
-     const buttonAddOne = document.createElement("button");
-     buttonAddOne.textContent = productsFruit[i]. btnAdd;
-     buttonAddOne.className = "addCart";
-     buttonAddOne.addEventListener('click',function(){
-         
-         let name = productsFruit[i].name;
-         let price = productsFruit[i].price;
-         let img = productsFruit[i].imgUrl;
-         addProductToCart(name, price, img);
-    
-        updateTotal();
-     });
-     
-
-    
-    
-
-     itemElementOne.appendChild(imageElementOne);
-     itemElementOne.appendChild(nameElementOne);
-     itemElementOne.appendChild(priceElementOne);
-     itemElementOne.appendChild(buttonAddOne);
-    
-     fruitDisplay.appendChild(itemElementOne);
-    
- }
-
-
- const dryfruitsproDisplay = document.querySelector(".dryfruit-section");
- const dryfruitDisplay = document.querySelector(".dryfruit-display");
-
- const productsdryFruit = [
-     {
-         imgUrl:"images/kaju.jpeg",
-         name: "Kaju",
-         price: "120 Dkk",
-         btnAdd: "Add to Cart",
-       
-       
-    
-     },
-
-     {
-         imgUrl: "images/almond.jpeg",
-         name: "Almond",
-         price: "150 Dkk",
-         btnAdd: "Add to Cart",
-        
-       
-    
-    },
-     {
-         imgUrl: "images/dates.webp",
-         name: "Dates",
-         price: "60 Dkk",
-          btnAdd:"Add to Cart",
-        
-    
-     
-    },
-     {
-         imgUrl: "images/Raisins.jpeg",
-         name: "Raisins",
-         price: "120 Dkk",
-         btnAdd: "Add to Cart",
-        
-       
-    
-     },
-     {
-           imgUrl: "images/pista.jpg",
-         name: "Pista",
-         price: "190 Dkk",
-         btnAdd: "Add to Cart",
-     },
-       {
-           imgUrl: "images/walnut.jpg",
-         name: "Walnut",
-         price: "70 Dkk",
-           btnAdd: "Add to Cart",
-    },
-
-
- ];
-
- for (let i = 0; i < productsdryFruit.length; i++){
-     const itemElementtwo = document.createElement("div");
-     itemElementtwo.className = "item";
-   
-
-     const imageElementtwo = document.createElement("img");
-     imageElementtwo.src = productsdryFruit[i].imgUrl;
-     imageElementtwo.style.width = "160px";
-     imageElementtwo.style.height = "100px";
-  
-
-     const nameElementtwo = document.createElement("p");
-     nameElementtwo.textContent = productsdryFruit[i].name;
-      nameElementtwo.style.color = "green";
-
-     const priceElementtwo = document.createElement("p");
-     priceElementtwo.textContent = productsdryFruit[i].price;
-     priceElementtwo.style.color = "red";
-
-    const buttonAddtwo = document.createElement("button");
-     buttonAddtwo.textContent = productsdryFruit[i]. btnAdd;
-     buttonAddtwo.className = "addCart";
-     buttonAddtwo.addEventListener('click',function(){
-         
-         let name = productsdryFruit[i].name;
-         let price = productsdryFruit[i].price;
-         let img = productsdryFruit[i].imgUrl;
-         addProductToCart(name, price, img);
-    
-        updateTotal();
-     });
-    
-    
-
-     itemElementtwo.appendChild(imageElementtwo);
-     itemElementtwo.appendChild(nameElementtwo);
-     itemElementtwo.appendChild(priceElementtwo);
-     itemElementtwo.appendChild(buttonAddtwo);
-    
-    dryfruitDisplay.appendChild(itemElementtwo);
-    
- }
-
-//Deal Section Date JS
+//Deal Section  JS to Diasply the Date .
 let countDate = new Date('june 20,2022 00:00:00').getTime();
-
 function CountDown() {
     let now = new Date().getTime();
     let gap = countDate-now;
@@ -488,25 +416,47 @@ function CountDown() {
     let s= Math.floor((gap % (minute))/(second));
  
 
-    document.getElementById('day').innerText = d;
+     document.getElementById('day').innerText = d;
      document.getElementById('hour').innerText = h;
-
-     document.getElementById('minute').innerText = m;
-
-     document.getElementById('second').innerText = s;
-
-
+    document.getElementById('minute').innerText = m;
+    document.getElementById('second').innerText = s;
 }
-
 setInterval(function () {
     CountDown();
 }, 1000);
 
+// MouseOver and MouseOut in menu bar( Prdocuts And Deals)  
+
+let timeOutValue = 100;      // SET TIMEOUT (IN MILISECONDS).
+     let setTimeToHide_ID, mItem;
+
+     function showmenu(obj) {
+         if (mItem) mItem.style.display = 'none';
+
+         mItem = document.getElementById(obj);
+         mItem.style.display = 'block';
+    }
+//     // SET TIME TO HIDE MENU LIST.
+     function setTimeToHide() {
+         setTimeToHide_ID = window.setTimeout(HideMenu, timeOutValue);
+     }
+
+     function HideMenu() {
+        if (mItem) mItem.style.display = 'none';
+     }       // HIDE THE MENU LIST AFTER A SPECIFIED TIME.
+
+     function ReSetTimer() {
+         if (setTimeToHide_ID) {
+             window.clearTimeout(setTimeToHide_ID);
+             setTimeToHide_ID = 0;
+         }
+};
+
 // toggle button
 
-const navToggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".nav-links");
+// const navToggle = document.querySelector(".nav-toggle");
+// const links = document.querySelector(".nav-links");
 
-navToggle.addEventListener('click', function () {
-    links.classList.toggle("show_nav");
-});
+// navToggle.addEventListener('click', function () {
+//     links.classList.toggle("show_nav");
+// });
