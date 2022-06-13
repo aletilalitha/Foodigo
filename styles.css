@@ -671,22 +671,35 @@ textarea{
         display: flex;
         justify-content:space-evenly;
         background-color: rgba(32, 163, 12, 0.829);
+      
     }
     .nav-links{
         display: none;
     }
-    .show-nav {
-        padding-top: 30px;
-        display: flex;
-        width: 150px;
-        height: 50vh;
+    .show_nav {
+        padding-top: 2%;
+        display: none;
+        width: 100vw;
+        height: 100vh;
         flex-direction: column;
         justify-content: flex-start;
+      
     }
-    .nav-toggle button{
-        display:block;
+   
+   .nav-toggle button{
+    
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 30px;
+        color:black;
+        background: transparent;
+        border-color: transparent;
+        transition: all 0.3s linear;
+        cursor: pointer;
+        display: block;
+    }
        
-    }
+    
   
     .buttons-navbar {
         display: flex;
@@ -726,6 +739,12 @@ textarea{
     .product-list {
         margin-left: 5px;
         padding-top: 10px;
+    }
+    .product-list h2 {
+       font-size:15px;
+    }
+    .products {
+        text-transform: lowercase;
     }
     .features-section {
         display: flex;
@@ -1014,7 +1033,7 @@ textarea {
     position: fixed;
     top: 20%;
     right: -100%;
-    width: 220px;
+    width: 180px;
     min-height: 60%;
     padding: 10px;
     background-color: #FFF;

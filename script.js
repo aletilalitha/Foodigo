@@ -502,23 +502,11 @@ setInterval(function () {
     CountDown();
 }, 1000);
 
-//toggle button
+// toggle button
 
-//   const navToggle = document.querySelector(".navbar_toggle");
-//   const links = document.querySelector(".nav-links");
+const navToggle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".nav-links");
 
-//   navToggle.onclick = () => {
-//     links.classList.add("active");
-
-// };
-//   navToggle.addEventListener('click', function(){
-//      links.classList.toggle("show-nav");
-//   })
-
-//  cartIcon.onclick = () => {
-//     cart.classList.add("active");
-
-// }
-// closeCart.onclick = () => {
-//     cart.classList.remove('active');
-// }
+navToggle.addEventListener('click', function () {
+    links.classList.toggle("show_nav");
+});
