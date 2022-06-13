@@ -406,6 +406,68 @@ body {
     border-radius: 10px;
     box-shadow: white;
 }
+.contacts{
+    width:100%;
+    margin-top:20px;
+}
+.contacts h2{
+    text-align: center;
+    font-size: 30px;
+   
+    font-weight: bold;
+}
+.contacts h2 span{
+    background-color: orangered;
+    margin-left: 5px;
+    padding: 0px 10px;
+    color: white;
+    border-radius: 20px;
+    
+}
+.contacts form{
+    width: 70%;
+    margin:auto;
+    border:2px solid rgb(151, 148, 148);
+    margin-top:30px;
+    margin-bottom:30px;
+    border-radius:15px;
+    background-color: #FFF;
+}
+.input-box{
+    margin-top:20px;
+    margin-left:20px;
+    margin-bottom:20px;
+   
+}
+.input-box input[type=text]{
+    width:40%;
+    padding:10px;
+    margin-right:20px;
+    border-radius: 15px;
+}
+.input-box input[type=email] {
+    width: 40%;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+textarea{
+    width:60%;
+    margin-left:30px;
+    border-radius: 15px;
+    padding:10px;
+}
+.btn-contact{
+    margin-left:20px;
+    margin-top: 30px;
+    margin-bottom:20px;
+    padding:10px;
+    color:white;
+    cursor: pointer;
+    background-color: orangered;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
 .footer {
     display: flex;
     align-items: center;
@@ -805,6 +867,76 @@ body {
     color: white;
     border-radius: 10px;
     box-shadow: white;
+}
+.contacts {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contacts h2 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left:20px;
+}
+
+.contacts h2 span {
+    background-color: orangered;
+    margin-left: 5px;
+    padding: 0px 10px;
+    color: white;
+    border-radius: 20px;
+
+}
+
+.contacts form {
+    width: 60%;
+   margin-left:20px;
+    border: 2px solid rgb(151, 148, 148);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    background-color: #FFF;
+}
+
+.input-box {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+}
+
+.input-box input[type=text] {
+    width: 30%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+.input-box input[type=email] {
+    width: 30%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+textarea {
+    width: 40%;
+    margin-left: 15px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.btn-contact {
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-left:10px;
+    color: white;
+    cursor: pointer;
+    background-color: orangered;
+    text-transform: lowercase;
+    border-radius: 10px;
 }
 .footer {
     display: flex;
