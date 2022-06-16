@@ -656,6 +656,12 @@ textarea{
 }
 /*media Query  CSS Start for Responsive Web Page*/ 
 @media screen and (max-width:950px){
+    body {
+        background-image: url("images/body-back.webp");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     /*Header CSS*/
     .main-header {
         width:100%;
