@@ -51,7 +51,7 @@ function changeImage() {
      },
      {
          imgUrl: "images/cali.webp",
-        name: "Capsicum",
+        name: "Califlower",
         price: "40 Dkk",
          btnAdd:"Add to Cart",
      },
@@ -207,7 +207,7 @@ function changeImage() {
  const productsdryFruit = [
      {
          imgUrl:"images/kaju.jpeg",
-         name: "Kaju",
+         name: "Cashew",
          price: "120 Dkk",
          btnAdd: "Add to Cart",
        },
