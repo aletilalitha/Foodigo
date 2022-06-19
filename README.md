@@ -1,2 +1,1 @@
-# Foodigo
-Online Grocery Store
+Foodigo is  an Online Grocery Store that allows Order the items.The Main Features is Deals of The Day its shows tha how many days the deals will start and products are adding to cart ,increase the product quantity,deleting products from cart.for display products i used javascript objects.
