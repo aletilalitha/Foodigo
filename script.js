@@ -398,7 +398,7 @@ function updateTotal() {
  
 
 //Deal Section  JS to Diasply the Date .
-let countDate = new Date('june 20,2022 00:00:00').getTime();
+let countDate = new Date('july 23,2022 00:00:00').getTime();
 function CountDown() {
     let now = new Date().getTime();
     let gap = countDate-now;

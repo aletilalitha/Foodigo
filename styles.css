@@ -909,7 +909,7 @@ textarea{
 }
 
 .deal .content .count-down .box h3 {
-    color: black;
+    color: red;
     padding: 5px;
     font-size: 15px;
 }
